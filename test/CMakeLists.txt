@@ -3,7 +3,7 @@ ENABLE_TESTING()
 include ( FluidUnitTest )
 
 # first define the test target, used by the macros below
-add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND} -C $<CONFIG>  --output-on-failure)
+add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND} -C $<CONFIG> --parallel 1 --output-on-failure)
 
 
 ## add unit tests here ##
